@@ -1,5 +1,7 @@
 const form = document.querySelector('form')
 const correctAnswers = ['A', 'A', 'B', 'B']
+const result = document.querySelector('span')
+const resultBar = document.querySelector('.result')
 
 form.addEventListener('submit', e => {
   e.preventDefault()
@@ -12,5 +14,8 @@ form.addEventListener('submit', e => {
     }
   })
 
+  result.textContent = score + '%'
+  console.log(resultBar.classList)
+  resultBar.classList.remove('d-none')
   console.log(score)
 })
